@@ -8,4 +8,4 @@ const Button = ({ children }: ButtonProps) => (
   <button className={styles.button}>{children}</button>
 );
 
-export default Button;
+export { Button };
