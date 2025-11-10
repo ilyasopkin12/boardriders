@@ -1,5 +1,5 @@
 import './HomePage.scss';
-import Button from '@/shared/ui/Button';
+import { Button } from 'shared';
 const HomePage = () => {
     return (
         <div className="home-page">
