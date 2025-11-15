@@ -1,0 +1,17 @@
+.InputContainer {
+    Display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.bonusCard {
+    width: 421px;
+    height: 50px;
+}
+
+.bonusCard::-webkit-inner-spin-button,
+.bonusCard::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+

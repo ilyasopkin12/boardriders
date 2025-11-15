@@ -3,46 +3,51 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  &:disabled {
-    background-color: #CED4D7;
-    color:#828B8D;
-  }
 }
+.Black:disabled {
+  background-color: #CED4D7;
+  color: #828B8D;
+}
+
 .Small {
   width: 408px;
   height: 50px;
 }
+
 .Large {
   width: 408px;
   height: 70px;
 }
+
 .Red {
   background-color: #EB5757;
   color: #fff;
   border: none;
   cursor: pointer;
-  &:disabled {
-    background-color: #CED4D7;
-    color: #828B8D;
-  }
 }
+.Red:disabled {
+  background-color: #CED4D7;
+  color: #828B8D;
+}
+
 .BlackBorder {
   background-color: #fff;
   color: #000;
   border: 1px solid #000;
   cursor: pointer;
-  &:disabled {
-    border-color: #BDBDBD;
-    color: #CED4D7;
-  }
 }
+.BlackBorder:disabled {
+  border-color: #BDBDBD;
+  color: #CED4D7;
+}
+
 .RedBorder {
   background-color: #fff;
   color: #EB5757;
   border: 1px solid #EB5757;
   cursor: pointer;
-  &:disabled {
-    border-color: #BDBDBD;
-    color: #CED4D7;
-  }
 }
+.RedBorder:disabled {
+  border-color: #BDBDBD;
+  color: #CED4D7;
+}/*# sourceMappingURL=Button.module.css.map */
