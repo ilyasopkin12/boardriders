@@ -13,4 +13,23 @@
   font-size: 24px;
   font-weight: bold;
   color: #e9e7e7;
+}
+
+.input__container-promoCard {
+  display: flex;
+  align-items: center;
+}
+
+.button__container-promoCard {
+  display: flex;
+  align-items: center;
+}
+
+.input__container-phoneNumber {
+  display: flex;
+  align-items: center;
+}
+
+.phoneNumberLabel {
+  color: #828B8D;
 }/*# sourceMappingURL=HomePage.css.map */

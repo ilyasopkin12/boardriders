@@ -5,7 +5,52 @@
   align-items: flex-start;
 }
 
+input {
+  box-sizing: border-box;
+  padding: 0px;
+  padding-left: 20px;
+}
+input:focus {
+  outline: none;
+}
+
+.ImageLabelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.questionMarkImage {
+  margin-bottom: -4px;
+}
+
+.Description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #828B8D;
+}
+
 .bonusCard {
+  border: 1px solid #CED4D7;
+  width: 421px;
+  height: 50px;
+}
+
+.InputButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.promoCard {
+  border: 1px solid #CED4D7;
+  width: 370px;
+  height: 50px;
+}
+
+.phoneNumber {
+  border: 1px solid #CED4D7;
   width: 421px;
   height: 50px;
 }
