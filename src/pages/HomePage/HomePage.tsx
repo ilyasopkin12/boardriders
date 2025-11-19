@@ -10,7 +10,7 @@ const HomePage = () => {
   const [promoCard, setPromoCard] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [bonusCard, setBonusCard] = useState("");
-  const handlePromoCardChange = (value: string) => {
+  const handlePromoCardChange =  (value: string) => {
     if (/^\d*$/.test(value) && value.length <= 16) {
       setPromoCard(value);
     }

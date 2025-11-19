@@ -9,9 +9,10 @@ interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 
     containerClassName?: string;
     sendButton?: React.ReactNode;
     onChange: (value: string) => void;
+    onSubmit?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, value, description, containerClassName, sendButton, onChange, ...rest}, ref) => {
+const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, value, description, containerClassName, sendButton, onChange, onSubmit, ...rest}, ref) => {
     const generatedId = React.useId();
     const inputId = id || generatedId;
     const descriptionId = `${inputId}-description`;
