@@ -1,54 +1,28 @@
-.InputContainer {
-    Display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+Input {
+  background-color: #fff;
+  border: 1px solid #ced4d7;
+  padding: 12px 0px 12px 20px;
+  &:focus {
+    border: 1px solid #000;
+    outline: none;
+  }
 }
-input {
-    box-sizing: border-box;
-    padding: 0px;
-    padding-left: 20px;
-    &:focus {
-        outline: none;
-    }
+.inputButtonContainer {
+  display: flex;
+  align-items: center;
+  
 }
-.ImageLabelContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+.inputContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.questionMarkImage {
-    margin-bottom: -4px;
+.labelContainer {
+  display: flex;
+  align-items: center;
 }
-.Description {
-    font-size: 12px;
-    font-weight: 400;
-    color: #828B8D;
+.description {
+  font-size: 12px;
+  color: #828b8d;
 }
-.bonusCard {
-    border: 1px solid #CED4D7;
-    width: 421px;
-    height: 50px;
-}
-.InputButtonContainer {
-    display: flex;
-    align-items: center;
-}
-.promoCard {
-    border: 1px solid #CED4D7;
-    width: 370px;
-    height: 50px;
-}
-.phoneNumber {
-    border: 1px solid #CED4D7;
-    width: 421px;
-    height: 50px;
-}
-.bonusCard::-webkit-inner-spin-button,
-.bonusCard::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-

@@ -4,14 +4,14 @@ import React from 'react';
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title?: string;
   className?: string;
-  onClick: () => void;
+  onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   image?: string;
-  variant: 'Black' | 'Red' | 'RedBorder' | 'BlackBorder';
-  size: 'Small' | 'Large' | 'ExtraSmall';
+  variant: 'black' | 'red' | 'redBorder' | 'blackBorder';
+  size: 'small' | 'large' | 'extraSmall';
 }
-const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size, className, image, type}) => {
+const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size, className, image, type = 'button'}) => {
   return (
     <button 
       className={`${styles[variant]} ${styles[size]} ${className || ''}`} 

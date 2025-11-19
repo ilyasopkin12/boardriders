@@ -1,44 +1,33 @@
 import React from 'react';
 import styles from './Input.module.scss';
 
-interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'value' | 'onChange'> {
-    variant: 'bonusCard' | 'promoCard' | 'phoneNumber';
-    placeholder: string;
-    label: string;
-    id: string;
-    type?: React.InputHTMLAttributes<HTMLInputElement>['type'];
+interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'> {
+    label?: React.ReactNode;
+    id?: string;
     value: string;
     description?: string;
-    image?: string;
-    questionMarkImage?: string;
-    button?: React.ReactNode;
-    labelClassName?: string;
-    labelStyle?: React.CSSProperties;
+    containerClassName?: string;
+    sendButton?: React.ReactNode;
     onChange: (value: string) => void;
 }
 
-const Input: React.FC<IInputProps> = ({ variant, placeholder, label, id, type = 'text', value, description, image, questionMarkImage, button, labelClassName, labelStyle, onChange, ...rest}) => {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value;
-        onChange(value);
-    }
-    const labelClasses = labelClassName 
-        ? `${styles.Label} ${labelClassName}` 
-        : styles.Label;
+const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, value, description, containerClassName, sendButton, onChange, ...rest}, ref) => {
+    const generatedId = React.useId();
+    const inputId = id || generatedId;
+    const descriptionId = `${inputId}-description`;
+
     return (
-        <div className={styles.InputContainer}>
-            <div className={styles.ImageLabelContainer}>
-                {image && <img src={image} alt={label} />}
-                <label className={labelClasses} style={labelStyle} htmlFor={id}>{label}</label>
-                {questionMarkImage && <img src={questionMarkImage} alt={label} className={styles.questionMarkImage} />}
+        <div className= {`${styles.inputContainer} ${containerClassName}`}>
+            <div className={styles.labelContainer}>
+                <label htmlFor={inputId}>{label}</label>
             </div>
-            <div className={styles.InputButtonContainer}>
-                <input className={styles[variant]} placeholder={placeholder} id={id} type={type} value={value} onChange={handleChange} {...rest} />
-                {button && button}
+            <div className={styles.inputButtonContainer}>
+                <input ref={ref} aria-describedby={descriptionId} id={inputId} value={value} onChange={(e) => onChange(e.target.value)} {...rest} />
+                {sendButton && sendButton}
             </div>
-            <p className={styles.Description}>{description}</p>
+            {description && <p id={descriptionId} className={styles.description}>{description}</p>}
         </div>
     );
-}
+});
 
 export { Input };
