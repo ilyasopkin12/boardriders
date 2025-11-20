@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Homepage from '../pages/HomePage/HomePage';
-import AboutPage from '../pages/AboutPage/AboutPage';
-import { Header, Footer } from './layout/widgets';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Homepage from "../pages/HomePage/HomePage";
+import AboutPage from "../pages/AboutPage/AboutPage";
+import { Header, Footer } from "../widgets";
 function App() {
   return (
     <div className="App">
@@ -19,4 +19,3 @@ function App() {
 }
 
 export default App;
-
