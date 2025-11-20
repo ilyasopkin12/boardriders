@@ -1,11 +1,42 @@
 .home-page {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
     &-title {
         font-size: 24px;
         font-weight: bold;
         color: #e9e7e7;
     }
+}
+
+.inputContainer {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+.labelContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.defaultInput {
+    min-width: 408px;
+    min-height: 50px;
+}
+.promoCardInput {
+    min-width: 370px;
+    min-height: 50px;
+}
+.phoneNumberLabel {
+    color: #828B8D;
+}
+.applyButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    width: 75px;
+    height: 50px;
 }

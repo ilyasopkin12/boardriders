@@ -1,0 +1,45 @@
+Button {
+  Cursor: pointer;
+  border: none;
+  &:disabled {
+    background-color: #CED4D7;
+    color: #828B8D;
+  }
+  &:hover {
+    background-color: #8d8b8b;
+  }
+  &:active {
+    background-color: #adadad;
+  }
+}
+
+.black {
+  background-color: #000;
+  color: #fff;
+}
+.small {
+  min-width: 408px;
+  min-height: 50px;
+}
+.large {
+  min-width: 408px;
+  min-height: 70px;
+}
+.extraSmall {
+  min-width: 75px;
+  min-height: 50px;
+}
+.red {
+  background-color: #EB5757;
+  color: #fff;
+}
+.blackBorder {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.redBorder {
+  background-color: #fff;
+  color: #EB5757;
+  border: 1px solid #EB5757;
+}
