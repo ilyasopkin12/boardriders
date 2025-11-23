@@ -6,4 +6,8 @@ declare module '*.scss' {
 declare module '*.svg' {
     const content: string;
     export default content;
-}git
+}
+declare module '*.png' {
+    const content: string;
+    export default content;
+}

@@ -1,0 +1,30 @@
+@use "../../../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../../../shared/assets/fonts/_variables.scss" as variables;
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+.header {
+    &__bottomList {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        list-style: none;
+        padding: 0;
+    }
+    &__bottomText {
+        @include mixins.body-2-14-medium-style();
+        text-decoration: none;
+        color: variables.$black-color;
+    }
+    &__bottomSale {
+        @include mixins.body-2-14-medium-style();
+        color: variables.$red-color;
+        text-decoration: none;
+    }
+};
