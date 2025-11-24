@@ -38,6 +38,10 @@
       &__genderText {
         color: variables.$black-color;
         text-decoration: none;
+        &:hover {
+          border-bottom: solid black ;
+          text-decoration: none;
+        }
       }
     
       &__logo {

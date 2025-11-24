@@ -6,6 +6,7 @@ import paymentIcon from "../../../shared/assets/images/payment.svg";
 import returnIcon from "../../../shared/assets/images/return.svg";
 import "../../../shared/assets/fonts/_fonts.scss";
 import headerTopStyles from "./headerTop.module.scss";
+import { NavLink } from "react-router-dom";
 
 export const HeaderTop = ( ) => {
   return (
@@ -32,27 +33,27 @@ export const HeaderTop = ( ) => {
             />
           </div>
           <div className={headerTopStyles.header__itemNav}>
-            <a
-              href="#"
+            <NavLink
+              to="/shop"
               className={headerTopStyles.header__topText}
               aria-label="Перейти в магазин"
             >
               Магазин
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to="/help"
               className={headerTopStyles.header__topText}
               aria-label="Перейти в раздел помощи"
             >
               Помощь
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to="/blogs"
               className={headerTopStyles.header__topText}
               aria-label="Перейти в блоги"
             >
               Блоги
-            </a>
+            </NavLink>
           </div>
         </div>
         <div className={headerTopStyles.header__topRight}>

@@ -5,37 +5,38 @@ import savedImage from "@/shared/assets/images/saved.svg";
 import cartImage from "@/shared/assets/images/cart.svg";
 import searchImage from "@/shared/assets/images/search.svg";
 import headerMiddleStyles from "./headerMiddle.module.scss";
+import { NavLink } from "react-router-dom";
 
 export const HeaderMiddle = ( ) => {
   return (
     <div className={headerMiddleStyles.header__middle}>
         <div className={headerMiddleStyles.container}>
             <div className={headerMiddleStyles.header__gender}>
-              <a
-                href="#"
+              <NavLink
+                to="/men"
                 className={headerMiddleStyles.header__genderText}
                 aria-label="Перейти в раздел для мужчин"
               >
                 Мужчинам
-              </a>
-              <a
-                href="#"
+              </NavLink>
+              <NavLink
+                to="/women"
                 className={headerMiddleStyles.header__genderText}
                 aria-label="Перейти в раздел для женщин"
               >
                 Женщинам
-              </a>
-              <a
-                href="#"
+              </NavLink>
+              <NavLink
+                to="/kids"
                 className={headerMiddleStyles.header__genderText}
                 aria-label="Перейти в раздел для детей"
               >
                 Детям
-              </a>
+              </NavLink>
             </div>
             <div className={headerMiddleStyles.header__logo}>
-              <a
-                href="#"
+              <NavLink
+                to="/HomePage"
                 className={headerMiddleStyles.header__logoLink}
                 aria-label="Перейти на главную страницу"
               >
@@ -43,7 +44,7 @@ export const HeaderMiddle = ( ) => {
                   <source srcSet={logoImage} type="image/png" />
                   <img src={logoImage} alt="logo" />
                 </picture>
-              </a>
+              </NavLink>
             </div>
             <div className={headerMiddleStyles.header__actions}>
               <a

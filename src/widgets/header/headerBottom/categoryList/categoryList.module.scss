@@ -4,10 +4,9 @@
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    max-width: 1680px;
-    margin: 0 auto;
+    max-width: 1360px;
 }
 .header {
     &__bottomList {
