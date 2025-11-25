@@ -4,6 +4,7 @@ import 'modern-css-reset/dist/reset.min.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '../shared/assets/fonts/_fonts.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

@@ -1,0 +1,25 @@
+@use "../../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../../shared/assets/fonts/_variables.scss" as variables;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+.header {
+    &__bottom {
+        max-width: 1680px;
+        margin: 0 auto;
+        padding: 18px 0;
+    }
+}
+
+@media (max-width: 414px) {
+  .header {
+    &__bottom {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,238 @@
+@use 'sass:map';
+
+$font-grtsk-peta-caption-8-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 8px,
+  line-height: 10px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-gtrsk-peta-H1: (
+  family: 'Grtsk Peta',
+  style: normal,
+  weight: 700,
+  size: 32px,
+  line-height: 40px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+$font-grtsk-peta-H2: (
+  family: 'Grtsk Peta',
+  style: normal,
+  weight: 700,
+  size: 21px,
+  line-height: 35px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-caption-medium12: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 12px,
+  line-height: 20px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-caption-capital8-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 18px,
+  line-height: 10px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-h3-capital16-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 16px,
+  line-height: 30px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+$font-grtsk-peta-body-2-14-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 14px,
+  line-height: 25px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-buttons-subtitle-3-16-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 16px,
+  line-height: 30px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-subtitle-1-21-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 21px,
+  line-height: 35px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-body-3-underline-14-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 14px,
+  line-height: 25px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+$font-grtsk-peta-body-1-16-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 16px,
+  line-height: 25px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+$font-grtsk-peta-body-4-captial-12-medium: (
+  family: 'Grtsk Peta',
+  style: medium,
+  weight: 500,
+  size: 12px,
+  line-height: 20px,
+  letter-spacing: -0.2px,
+  color: #000000
+);
+
+@mixin body-4-captial-12-medium-style($font-map: $font-grtsk-peta-body-4-captial-12-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin H2-style($font-map: $font-grtsk-peta-H2) {
+  font-family: map.get(($font-map, family), family);
+  font-style: map.get(($font-map, style), style);
+  font-weight: map.get(($font-map, weight), weight);
+  font-size: map.get(($font-map, size), size);
+  line-height: map.get(($font-map, line-height), line-height);
+  letter-spacing: map.get(($font-map, letter-spacing), letter-spacing);
+  color: map.get(($font-map, color), color);
+};
+
+@mixin body-1-16-medium-style($font-map: $font-grtsk-peta-body-1-16-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin body-3-underline-14-medium-style($font-map: $font-grtsk-peta-body-3-underline-14-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin subtitle-1-21-medium-style($font-map: $font-grtsk-peta-subtitle-1-21-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin buttons-subtitle-3-16-medium-style($font-map: $font-grtsk-peta-buttons-subtitle-3-16-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin body-2-14-medium-style($font-map: $font-grtsk-peta-body-2-14-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin h3-capital16-medium-style($font-map: $font-grtsk-peta-h3-capital16-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin H1-style($font-map: $font-gtrsk-peta-H1) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin caption-medium12-style($font-map: $font-grtsk-peta-caption-medium12) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin caption-capital8-medium-style($font-map: $font-grtsk-peta-caption-capital8-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};
+
+@mixin caption-8-medium-style($font-map: $font-grtsk-peta-caption-8-medium) {
+  font-family: map.get($font-map, family);
+  font-style: map.get($font-map, style);
+  font-weight: map.get($font-map, weight);
+  font-size: map.get($font-map, size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
+  color: map.get($font-map, color);
+};

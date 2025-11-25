@@ -1,0 +1,145 @@
+@use "../../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../../shared/assets/fonts/_variables.scss" as variables;
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.header {  
+    &__arrowDownIcon {
+      width: 10px;
+      height: 6px;
+    }
+  
+    &__top {
+      @include mixins.caption-medium12-style();
+      padding: 15px 0;
+      background-color: variables.$black-color;
+    }
+  
+    &__topLeft {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+  
+    &__topRight {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+  
+    &__text {
+      color: variables.$white-color;
+    }
+  
+    &__topText {
+      text-decoration: none;
+      color: variables.$white-color;
+    }
+    &__itemNav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+    &__itemLocation {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__itemDelivery {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    &__itemPayment {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    &__itemReturn {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    &__action {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      color: variables.$black-color;
+      text-decoration: none;
+      &button {
+          &:hover {
+              background-color: none;
+              color: none;
+          }
+          &:active {
+            background-color: none;
+            color: none;
+          }
+      }
+    }
+  
+    &__actionText {
+      margin: 0;
+      color: variables.$black-color;
+      @include mixins.caption-8-medium-style();
+    }
+  
+    &__actionProfileButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: variables.$black-color;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+    }
+  
+    &__actionSearchButton {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: variables.$black-color;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+    }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pointIcon {
+  width: 14px;
+  height: 20px;
+}
+
+@media (max-width: 414px) {
+  .header {
+    &__top {
+      display: none;
+    }
+  }
+}

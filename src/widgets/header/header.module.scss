@@ -1,0 +1,27 @@
+@use "../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../shared/assets/fonts/_variables.scss" as variables;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pointIcon {
+  width: 14px;
+  height: 20px;
+}
