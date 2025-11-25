@@ -10,105 +10,153 @@
 }
 
 .header {
+  &__middle {
+    @include mixins.body-1-16-medium-style();
+    background-color: variables.$white-color;
+    padding: 22px 0;
+    max-width: 1680px;
+    margin: 0 auto;
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__gender {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__genderText {
+    color: variables.$black-color;
+    text-decoration: none;
+    &:hover {
+      border-bottom: solid black;
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__logoLink {
+    text-decoration: none;
+  }
+
+  &__logoIcon {
+    width: 100%;
+    height: auto;
+  }
+  &__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: variables.$black-color;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &__mobileActions {
+    display: none;
+  }
+  &__actionText {
+    margin: 0;
+    color: variables.$black-color;
+    @include mixins.caption-8-medium-style();
+  }
+
+  &__actionProfileButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: variables.$black-color;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+  }
+
+  &__actionSearchButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: variables.$black-color;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+  }
+  &__actionSearchButtonMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
     &__middle {
-        @include mixins.body-1-16-medium-style();
-        background-color: variables.$white-color;
-        padding: 22px 0;
-        max-width: 1680px;
-        margin: 0 auto;
-    
-        &__buttons {
-          display: flex;
-          align-items: center;
-          gap: 25px;
-        }
-      }
-      &__actions {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-      }
-    
-      &__gender {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-      }
-    
-      &__genderText {
-        color: variables.$black-color;
-        text-decoration: none;
-        &:hover {
-          border-bottom: solid black ;
-          text-decoration: none;
-        }
-      }
-    
-      &__logo {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-      }
-    
-      &__logoLink {
-        text-decoration: none;
-      }
-    
-      &__logoIcon {
-        width: 100%;
-        height: auto;
-      }
-      &__action {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        color: variables.$black-color;
-        text-decoration: none;
-        &button {
-            &:hover {
-                background-color: none;
-                color: none;
-            }
-            &:active {
-              background-color: none;
-              color: none;
-            }
-        }
-      }
-    
-      &__actionText {
-        margin: 0;
-        color: variables.$black-color;
-        @include mixins.caption-8-medium-style();
-      }
-    
-      &__actionProfileButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: variables.$black-color;
-        font-family: inherit;
-        font-size: inherit;
-        padding: 0;
-      }
-    
-      &__actionSearchButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: variables.$black-color;
-        font-family: inherit;
-        font-size: inherit;
-        padding: 0;
-      }
-    
+      max-width: 374px;
+    }
+    &__gender {
+      display: none;
+    }
+    &__actionText {
+      display: none;
+    }
+    &__action:first-child {
+      display: none;
+    }
+    &__action:last-child {
+      display: none;
+    }
+    &__logoIcon {
+      width: 100%;
+    }
+    &__actionBurgerMenu {
+      display: block;
+    }
+    &__actionSearchButtonMobile {
+      display: block;
+    }
+    &__mobileActions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+  }
 }

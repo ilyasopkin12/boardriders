@@ -8,6 +8,21 @@ import "../../../shared/assets/fonts/_fonts.scss";
 import headerTopStyles from "./headerTop.module.scss";
 import { NavLink } from "react-router-dom";
 
+const navItems = [
+  {
+    "name": "Магазин",
+    "href": "/shop",
+  },
+  {
+    "name": "Помощь",
+    "href": "/help",
+  },
+  {
+    "name": "Блоги",
+    "href": "/blogs",
+  },
+]
+
 export const HeaderTop = ( ) => {
   return (
     <div className={headerTopStyles.header__top}>
@@ -33,27 +48,16 @@ export const HeaderTop = ( ) => {
             />
           </div>
           <div className={headerTopStyles.header__itemNav}>
-            <NavLink
-              to="/shop"
-              className={headerTopStyles.header__topText}
-              aria-label="Перейти в магазин"
-            >
-              Магазин
-            </NavLink>
-            <NavLink
-              to="/help"
-              className={headerTopStyles.header__topText}
-              aria-label="Перейти в раздел помощи"
-            >
-              Помощь
-            </NavLink>
-            <NavLink
-              to="/blogs"
-              className={headerTopStyles.header__topText}
-              aria-label="Перейти в блоги"
-            >
-              Блоги
-            </NavLink>
+            {navItems.map((value, index) => (
+              <NavLink
+                to={value.href}
+                className={headerTopStyles.header__topText}
+                aria-label={`Перейти в раздел ${value.name}`}
+                key={index}
+              >
+                {value.name}
+              </NavLink>
+            ))}
           </div>
         </div>
         <div className={headerTopStyles.header__topRight}>

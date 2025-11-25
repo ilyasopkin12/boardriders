@@ -123,14 +123,23 @@
       padding: 0;
     }
 }
-  .icon {
-    display: flex;
-    align-items: center;
-    width: 24px;
-    height: 24px;
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pointIcon {
+  width: 14px;
+  height: 20px;
+}
+
+@media (max-width: 414px) {
+  .header {
+    &__top {
+      display: none;
+    }
   }
-  
-  .pointIcon {
-    width: 14px;
-    height: 20px;
-  }
+}

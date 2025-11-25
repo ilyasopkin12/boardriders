@@ -15,3 +15,11 @@
         padding: 18px 0;
     }
 }
+
+@media (max-width: 414px) {
+  .header {
+    &__bottom {
+      display: none;
+    }
+  }
+}
