@@ -71,3 +71,9 @@ export const CategoryList = () => {
         </div>
     );
 };
+
+/* {categoryList.map((value,index) => (
+    <div key={index}>
+        <NavLink className={value.href ==="sale" ? categoryListStyles.header__bottomSale : categoryListStyles.header__bottomText} to{value.href} key={index}>{value.name}</NavLink>
+    </div> 
+))} */
