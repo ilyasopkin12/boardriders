@@ -4,28 +4,24 @@ import { NavLink } from "react-router-dom";
 
 const categoryList = [
     {
-        "name": "Сноуборды",
+        "name": "Новинки",
         "href": "/snowboards",
     },
     {
-        "name": "Лыжи",
+        "name": "Сноуборды",
         "href": "/skis",
     },
     {
-        "name": "Скейты",
+        "name": "Лыжи",
         "href": "/skateboards",
     },
     {
-        "name": "Лонгборды",
-        "href": "/longboards",
-    },
-    {
         "name": "Скейты",
-        "href": "/skateboards",
+        "href": "/longboards",
     },
     {
         "name": "Лонгборды",
-        "href": "/longboards",
+        "href": "/skateboards",
     },
     {
         "name": "Вейкборды",
@@ -33,11 +29,11 @@ const categoryList = [
     },
     {
         "name": "Серфы",
-        "href": "/surfboards",
+        "href": "/longboards",
     },
     {
         "name": "SUP",
-        "href": "/supboards",
+        "href": "/surfboards",
     },
     {
         "name": "Одежда",
@@ -71,3 +67,9 @@ export const CategoryList = () => {
         </div>
     );
 };
+
+/* {categoryList.map((value,index) => (
+    <div key={index}>
+        <NavLink className={value.href ==="sale" ? categoryListStyles.header__bottomSale : categoryListStyles.header__bottomText} to{value.href} key={index}>{value.name}</NavLink>
+    </div> 
+))} */
