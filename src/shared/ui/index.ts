@@ -1,1 +1,3 @@
-export * from './Button';
+export { Button } from './Button';
+export { Input } from './Input';
+export { ProductCard } from './productCard';

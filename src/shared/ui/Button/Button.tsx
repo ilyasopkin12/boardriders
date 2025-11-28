@@ -11,7 +11,7 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: 'black' | 'red' | 'redBorder' | 'blackBorder';
   size: 'small' | 'large' | 'extraSmall';
 }
-const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size, className, image, type = 'button'}) => {
+export const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size, className, image, type = 'button'}) => {
   return (
     <button 
       className={`${styles[variant]} ${styles[size]} ${className || ''}`} 
@@ -23,5 +23,4 @@ const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size
       {title}
     </button>
   );
-}
-export { Button };
+};
