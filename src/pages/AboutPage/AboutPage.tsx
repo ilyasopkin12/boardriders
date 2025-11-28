@@ -2,7 +2,7 @@ import { ProductCard } from "@/shared/ui";
 import { useState, useEffect } from "react";
 import { getProductCard, IProduct } from "@/shared/api/productCard.api";
 
-const AboutPage = () => {
+export const AboutPage = () => {
   const [isFavorited, setIsFavorited] = useState(false);
   const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState(true);
@@ -63,4 +63,3 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;

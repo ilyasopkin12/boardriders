@@ -12,7 +12,7 @@ interface IInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 
     onSubmit?: (e: React.FormEvent<HTMLInputElement>) => void;
 }
 
-const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, value, description, containerClassName, sendButton, onChange, onSubmit, ...rest}, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, value, description, containerClassName, sendButton, onChange, onSubmit, ...rest}, ref) => {
     const generatedId = React.useId();
     const inputId = id || generatedId;
     const descriptionId = `${inputId}-description`;
@@ -30,5 +30,3 @@ const Input = React.forwardRef<HTMLInputElement, IInputProps>(({ label, id, valu
         </div>
     );
 });
-
-export { Input };
