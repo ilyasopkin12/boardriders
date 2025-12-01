@@ -27,29 +27,15 @@ export const ProductCard = ({
     <div className={styles.productCard}>
       <div className={styles.productCard__wrapper}>
         <div className={styles.productCard__image}>
-          {isFavorited && (
             <button
               type="button"
               onClick={handleFavorited}
               className={styles.productCard__button}
             >
-              <img src={favoritedImage} alt="favorite-image" />
+              <img src={isFavorited ? favoritedImage : notFavoritedImage} alt="favorite-image" />
             </button>
-          )}
-          {!isFavorited && (
-            <button
-              type="button"
-              onClick={handleFavorited}
-              className={styles.productCard__button}
-            >
-              <img src={notFavoritedImage} alt="not-favorite-image" />
-            </button>
-          )}
           <NavLink to="/productPage">
-            <picture>
-              <source srcSet={image} type="image/png"></source>
-              <img src={image} alt="product-image" />
-            </picture>
+            <img src={image} alt="product-image" />
           </NavLink>
         </div>
         <div className={styles.productCard__text}>

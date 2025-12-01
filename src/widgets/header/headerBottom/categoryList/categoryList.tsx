@@ -61,7 +61,7 @@ export const CategoryList = () => {
         <div className={categoryListStyles.container}>
             {categoryList.map((value, index) => (
                 <div key={index}>
-                    <NavLink className={value.href === "/sale" ? categoryListStyles.header__bottomSale : categoryListStyles.header__bottomText} to={value.href} key={index}>{value.name}</NavLink>
+                    <NavLink className={({isActive}) => isActive ? categoryListStyles.header__active : categoryListStyles.header__bottomText} to={value.href} key={index}>{value.name}</NavLink>
                 </div>
             ))}
         </div>

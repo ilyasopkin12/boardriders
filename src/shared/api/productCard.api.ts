@@ -7,15 +7,12 @@ export interface IProduct {
   description: string;
   category: string;
   image: string;
-  rating?: {
-    rate: number;
-    count: number;
-  };
 }
 
 export const getProductCard = async (): Promise<IProduct[]> => {
-  const response = await axios.get<IProduct[]>(
-    "https://fakestoreapi.com/products"
-  );
+  const api = axios.create({
+    baseURL: "https://fakestoreapi.com",
+  });
+  const response = await api.get<IProduct[]>("/products");
   return response.data;
 };
