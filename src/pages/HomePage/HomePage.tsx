@@ -6,7 +6,8 @@ import bonusCardImage from "@/shared/assets/images/bonusCard.svg";
 import promoCardImage from "@/shared/assets/images/promoCard.svg";
 import questionMarkImage from "@/shared/assets/images/questionmark.svg";
 import applyButtonImage from "@/shared/assets/images/arrowRight.svg";
-const HomePage = () => {
+import { MyBuggyComponent } from "@/shared/ui/myBuggyComponent";
+export const HomePage = () => {
   const [promoCard, setPromoCard] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [bonusCard, setBonusCard] = useState("");
@@ -30,7 +31,6 @@ const HomePage = () => {
   };
   return (
     <div className="home-page">
-      <h1 className="home-page-title">Home</h1>
       <div className="button-container">
         <Button
           title="Проверить даты доставки"
@@ -136,8 +136,8 @@ const HomePage = () => {
           }
         />
       </div>
+      <MyBuggyComponent />
     </div>
   );
 };
 
-export default HomePage;

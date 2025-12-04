@@ -1,20 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Homepage from "../pages/HomePage/HomePage";
-import AboutPage from "../pages/AboutPage/AboutPage";
+import { HomePage } from "../pages/HomePage";
+import { AboutPage } from "../pages/AboutPage";
 import { Header, Footer } from "../widgets";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </QueryClientProvider>
   );
 }
 

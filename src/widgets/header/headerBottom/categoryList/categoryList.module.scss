@@ -21,7 +21,7 @@
         text-decoration: none;
         color: variables.$black-color;
     }
-    &__bottomSale {
+    &__active {
         @include mixins.body-2-14-medium-style();
         color: variables.$red-color;
         text-decoration: none;
