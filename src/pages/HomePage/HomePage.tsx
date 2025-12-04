@@ -6,6 +6,7 @@ import bonusCardImage from "@/shared/assets/images/bonusCard.svg";
 import promoCardImage from "@/shared/assets/images/promoCard.svg";
 import questionMarkImage from "@/shared/assets/images/questionmark.svg";
 import applyButtonImage from "@/shared/assets/images/arrowRight.svg";
+import { MyBuggyComponent } from "@/shared/ui/myBuggyComponent";
 export const HomePage = () => {
   const [promoCard, setPromoCard] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -135,6 +136,7 @@ export const HomePage = () => {
           }
         />
       </div>
+      <MyBuggyComponent />
     </div>
   );
 };

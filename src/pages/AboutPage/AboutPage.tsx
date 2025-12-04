@@ -2,8 +2,6 @@ import { ProductCard } from "@/shared/ui";
 import {useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getProductCard, IProduct } from "@/shared/api/productCard.api";
-
-
 export const AboutPage = () => {
   const [isFavorited, setIsFavorited] = useState(false);
   const { data: products, isLoading, error } = useQuery<IProduct[],Error>({
