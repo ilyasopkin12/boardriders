@@ -1,1 +1,0 @@
-export { MyBuggyComponent } from './myBuggyComponent';
