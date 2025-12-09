@@ -1,0 +1,1 @@
+export { FooterMiddle } from "./footerMiddle";

@@ -1,0 +1,64 @@
+@use "../../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../../shared/assets/fonts/_variables.scss" as variables;
+.footerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logoWrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__subscribe {
+        display: flex;
+        width: 667px;
+        border: 1px solid rgba(255, 255, 255, 0.200);
+    }
+    &__subscribeLabel {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        @include mixins.body-1-16-medium-style();
+        width: 401px;
+        height: 50px;
+        background-color: variables.$black-color;
+        padding: 0 16px;
+        box-sizing: border-box;
+        gap: 12px;
+        cursor: pointer;
+        user-select: none;
+    }
+    &__subscribeInput {
+        width: 100%;
+        max-height: 100%;
+        border:none;
+        color: variables.$white-color;
+        outline: none;
+        background-color: transparent;
+        &:focus {
+            border:none;
+            outline: none;
+            background-color: transparent;
+        }
+    }
+    &__subscribeButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: transparent;
+        }
+        &:active {
+            background-color: transparent;
+        }
+        &:focus {
+            background-color: transparent;
+        }
+        &:disabled {
+            background-color: transparent;
+        }
+    }
+    &__subscribeDiscount {
+        color: variables.$red-color;
+    }
+}

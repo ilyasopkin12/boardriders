@@ -1,0 +1,28 @@
+@use "../../../shared/assets/fonts/_mixins.scss" as mixins;
+@use "../../../shared/assets/fonts/_variables.scss" as variables;
+
+.footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0 30px 0;
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__socialLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__textWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__text {
+        @include mixins.caption-medium12-style;
+        color: variables.$gray-1-color;
+    }
+}
