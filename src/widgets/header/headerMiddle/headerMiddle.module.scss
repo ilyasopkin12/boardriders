@@ -8,7 +8,20 @@
   max-width: 1680px;
   margin: 0 auto;
 }
-
+Button {
+  Cursor: pointer;
+  border: none;
+  &:disabled {
+    background-color: transparent;
+    color: #828B8D;
+  }
+  &:hover {
+    background-color: transparent;
+  }
+  &:active {
+    background-color: transparent;
+  }
+}
 .header {
   &__middle {
     @include mixins.body-1-16-medium-style();

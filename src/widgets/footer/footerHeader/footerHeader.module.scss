@@ -9,6 +9,9 @@
       align-items: center;
       gap: 10px;
     }
+    &__mobileSubscribe {
+      display: none;
+    }
     &__subscribe {
         display: flex;
         width: 667px;
@@ -60,5 +63,61 @@
     }
     &__subscribeDiscount {
         color: variables.$red-color;
+    }
+}
+
+@media (max-width: 414px) {
+    .footerHeader {
+        &__mobileSubscribe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0px 20px 0px 20px;
+            margin-bottom: 100px;
+        }
+        &__subscribe {
+            display: none;
+        }
+        &__logoWrapper {
+            display: none;
+        }
+        &__mobileSubscribeBottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        &__mobileSubscribeBottomItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        &__mobileSubscribeTitle {
+            @include mixins.body-1-16-medium-style;
+            color: variables.$white-color;
+            text-align: center;
+        }
+        &__mobileSubscribeSocial {
+            @include mixins.H1-style;
+            color: variables.$white-color;
+            text-align: center;
+            gap: 10px;
+        }
+        &__mobileSubscribeTopSocial {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        &__mobileSubscribeTop {
+            display: flex;
+            gap:15px;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
     }
 }

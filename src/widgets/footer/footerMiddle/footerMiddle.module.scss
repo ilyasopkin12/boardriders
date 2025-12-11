@@ -94,4 +94,44 @@
         color: variables.$gray-1-color;
         text-align: left;
     }
-  }
+}
+
+@media (max-width: 414px) {
+    .footerMiddle {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0px 0px 0px 20px;
+        border: none;
+        &__mainItem {
+            display: none;
+        }
+        &__mainItemContactsTitle {
+            display: none;
+        }
+        &__mainItemContacts {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.200);
+            padding-bottom: 16px;
+            margin-bottom: 21px;
+        }
+        &__mainItemContactsInfoTextNumber {
+            @include mixins.caption-capital8-medium-style;
+            color: variables.$white-color;
+        }
+        &__mainItemContactsInfoTextDescription {
+            @include mixins.caption-medium12-style;
+            color: variables.$gray-1-color;
+            text-align: left;
+        }
+        &__mainItemContactsInfoTextTitle {
+            @include mixins.caption-capital8-medium-style;
+            color: variables.$white-color;
+            text-align: left;
+        }
+        &__mainItemContactsInfoTextDescription {
+            @include mixins.caption-medium12-style;
+            color: variables.$gray-1-color;
+            text-align: left;
+        }
+    }
+}

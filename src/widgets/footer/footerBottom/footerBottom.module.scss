@@ -26,3 +26,9 @@
         color: variables.$gray-1-color;
     }
 }
+
+@media (max-width: 414px) {
+    .footerBottom {
+        display: none;
+    }
+}
