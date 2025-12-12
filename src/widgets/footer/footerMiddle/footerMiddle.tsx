@@ -88,7 +88,7 @@ export const FooterMiddle = () => {
         <div className={styles.footerMiddle__mainItemContactsInfo}>
           <img src={phoneIcon} alt="phone-icon" />
           <div className={styles.footerMiddle__mainItemContactsInfoText}>
-            <p className={styles.footerMiddle__mainItemContactsInfoTextNumber}>8 (800) 511-74-68</p>
+            <NavLink to="tel:88005117468" className={styles.footerMiddle__mainItemContactsInfoTextNumber}>8 (800) 511-74-68</NavLink>
             <p className={styles.footerMiddle__mainItemContactsInfoTextDescription}>
               Бесплатная горячая линия Ежедневно с 9 до 21
             </p>
@@ -98,7 +98,7 @@ export const FooterMiddle = () => {
           <img src={mailIcon} alt="email-icon" />
           <div className={styles.footerMiddle__mainItemContactsInfoText}>
             <p className={styles.footerMiddle__mainItemContactsInfoTextTitle}>Контактный Email</p>
-            <p className={styles.footerMiddle__mainItemContactsInfoTextDescription}>info@brd.ru</p>
+            <NavLink to="mailto:info@brd.ru" className={styles.footerMiddle__mainItemContactsInfoTextDescription}>info@brd.ru</NavLink>
           </div>
         </div>
       </div>

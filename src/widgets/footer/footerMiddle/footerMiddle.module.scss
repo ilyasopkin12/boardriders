@@ -78,6 +78,8 @@
     &__mainItemContactsInfoTextNumber {
         @include mixins.caption-capital8-medium-style;
         color: variables.$white-color;
+        cursor: pointer;
+        text-decoration: none;
     }
     &__mainItemContactsInfoTextDescription {
         @include mixins.caption-medium12-style;
@@ -93,6 +95,8 @@
         @include mixins.caption-medium12-style;
         color: variables.$gray-1-color;
         text-align: left;
+        cursor: pointer;
+        text-decoration: none;
     }
 }
 

@@ -57,9 +57,6 @@
         &:focus {
             background-color: transparent;
         }
-        &:disabled {
-            background-color: transparent;
-        }
     }
     &__subscribeDiscount {
         color: variables.$red-color;
