@@ -13,27 +13,27 @@ const categoryList = [
     },
     {
         "name": "Лыжи",
-        "href": "/skateboards",
+        "href": "/skiboards",
     },
     {
         "name": "Скейты",
-        "href": "/longboards",
-    },
-    {
-        "name": "Лонгборды",
         "href": "/skateboards",
     },
     {
-        "name": "Вейкборды",
+        "name": "Лонгборды",
         "href": "/longboards",
+    },
+    {
+        "name": "Вейкборды",
+        "href": "/wakeboards",
     },
     {
         "name": "Серфы",
-        "href": "/longboards",
+        "href": "/surfboards",
     },
     {
         "name": "SUP",
-        "href": "/surfboards",
+        "href": "/supboards",
     },
     {
         "name": "Одежда",

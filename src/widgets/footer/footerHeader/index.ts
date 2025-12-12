@@ -1,0 +1,1 @@
+export { FooterHeader } from "./footerHeader";
