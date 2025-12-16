@@ -1,44 +1,44 @@
 @use "@shared/assets/fonts/_variables.scss" as variables;
+@use "@shared/assets/fonts/_mixins.scss" as mixins;
 
 .homePage {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
-  &-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e9e7e7;
+}
+.slider {
+  max-width: 1920px;
+  margin: 0 auto;
+  &Container {
+    margin-bottom: 50px;
   }
 }
-
-.inputContainer {
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
-}
-.labelContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.defaultInput {
-  min-width: 408px;
-  min-height: 50px;
-}
-.promoCardInput {
-  min-width: 370px;
-  min-height: 50px;
-}
-.phoneNumberLabel {
-  color: #828b8d;
-}
-.applyButton {
+.brandsSlider {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
-  width: 75px;
-  height: 50px;
+  gap: 25px;
+  margin-bottom: 50px;
+  &Item {
+    display: flex;
+    opacity: 0.75;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+.promoSlider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  &Item {
+    &Title {
+      background-color: variables.$black-color;
+      padding: 15px 35px;
+      @include mixins.subtitle-1-21-medium-style;
+      color: variables.$white-color;
+    }
+  }
 }

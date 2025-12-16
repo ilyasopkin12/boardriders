@@ -7,10 +7,11 @@ import styles from "./Swiper.module.scss";
 import prevArrow from "@/shared/assets/images/navigationArrowLeft.svg";
 import nextArrow from "@/shared/assets/images/navigationArrowRight.svg";
 interface ICustomSwiperProps {
-  images: string[];
+  images?: string[];
   slidesPerView: number;
   centeredSlides?: boolean;
   loop?: boolean;
+  children?: React.ReactNode;
   style?: React.CSSProperties;
   spaceBetween?: string;
   navigation?: boolean;
@@ -27,6 +28,7 @@ export const CustomSwiper = ({
   navigation,
   spaceBetween,
   title,
+  children,
 }: ICustomSwiperProps) => {
   return (
     <div className={styles.swiperContainer}>
@@ -51,14 +53,22 @@ export const CustomSwiper = ({
         loop={loop}
         style={style}
       >
-        {images.map((image, index) => (
-          <SwiperSlide style={{ maxWidth: "1360px" }} key={index}>
-            <div className={styles.swiperSlide}>
-              {title && title[index] && <h2 className={styles.swiperSlideTitle}>{title[index]}</h2>}
-              <img src={image} alt="slider-image" />
-            </div>
-          </SwiperSlide>
-        ))}
+        {children
+          ? React.Children.map(children, (child, index) => (
+              <SwiperSlide style={{ maxWidth: "1360px" }} key={index}>
+                {child}
+              </SwiperSlide>
+            ))
+          : images?.map((image, index) => (
+              <SwiperSlide style={{ maxWidth: "1360px" }} key={index}>
+                <div className={styles.swiperSlide}>
+                  {title && title[index] && (
+                    <h2 className={styles.swiperSlideTitle}>{title[index]}</h2>
+                  )}
+                  <img src={image} alt="slider-image" />
+                </div>
+              </SwiperSlide>
+            ))}
       </Swiper>
     </div>
   );
