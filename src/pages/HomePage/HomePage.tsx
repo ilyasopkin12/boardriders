@@ -1,141 +1,64 @@
-import "./HomePage.scss";
-import { Button } from "@/shared";
-import { Input } from "@/shared/ui/Input";
-import { useState } from "react";
-import bonusCardImage from "@/shared/assets/images/bonusCard.svg";
-import promoCardImage from "@/shared/assets/images/promoCard.svg";
-import questionMarkImage from "@/shared/assets/images/questionmark.svg";
-import applyButtonImage from "@/shared/assets/images/arrowRight.svg";
+import styles from "./HomePage.module.scss";
+import heartImage from "@shared/assets/images/brandImage1.png";
+import treeImage from "@shared/assets/images/brandImage2.png";
+import dcImage from "@shared/assets/images/brandImage3.png";
+import quicksilverImage from "@shared/assets/images/brandImage4.png";
+import billabongImage from "@shared/assets/images/brandImage5.png";
+import boardridersImage from "@shared/assets/images/brandImage6.png";
+import libTecImage from "@shared/assets/images/brandImage7.png";
+import vaImage from "@shared/assets/images/brandImage8.png";
+import gnuImage from "@shared/assets/images/brandImage9.png";
+import skullcandyImage from "@shared/assets/images/brandImage10.png";
 export const HomePage = () => {
-  const [promoCard, setPromoCard] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [bonusCard, setBonusCard] = useState("");
-  const handlePromoCardChange =  (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setPromoCard(value);
-    }
-  };
-  const handlePhoneNumberChange = (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setPhoneNumber(value);
-    }
-  };
-  const handleBonusCardChange = (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setBonusCard(value);
-    }
-  };
-  const handleApplyPromoCard = () => {
-    setPromoCard("");
-  };
+  const brands = [
+    {
+      name: "heart",
+      image: heartImage,
+    },
+    {
+      name: "tree",
+      image: treeImage,
+    },
+    {
+      name: "DC",
+      image: dcImage,
+    },
+    {
+      name: "Quicksilver",
+      image: quicksilverImage,
+    },
+    {
+      name: "Billabong",
+      image: billabongImage,
+    },
+    {
+      name: "boardriders",
+      image: boardridersImage,
+    },
+    {
+      name: "libTech",
+      image: libTecImage,
+    },
+    {
+      name: "VA",
+      image: vaImage,
+    },
+    {
+      name: "GNU",
+      image: gnuImage,
+    },
+    {
+      name: "Skullcandy",
+      image: skullcandyImage,
+    },
+  ];
   return (
-    <div className="home-page">
-      <div className="button-container">
-        <Button
-          title="Проверить даты доставки"
-          variant="black"
-          size="small"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          title="ПЕРЕЙТИ К ПОКУПКАМ"
-          variant="red"
-          size="large"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          title="Проверить даты доставки"
-          variant="blackBorder"
-          size="small"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          title="ПЕРЕЙТИ К ПОКУПКАМ"
-          variant="redBorder"
-          size="large"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="inputContainer">
-        <Input
-          className="defaultInput"
-          containerClassName="bonusCard"
-          placeholder="Введите номер карты"
-          id="bonusCard"
-          value={bonusCard}
-          onChange={handleBonusCardChange}
-          description="Номер на обратной стороне карты"
-          label={
-            <div className="labelContainer">
-              <img
-                src={bonusCardImage}
-                alt="bonusCard"
-                className="bonusCardImage"
-              />
-              <span className="bonusCardLabel">Бонусная карта</span>
-              <img
-                src={questionMarkImage}
-                alt="questionMark"
-                className="questionMarkImage"
-              />
-            </div>
-          }
-        />
-
-        <div className="promoCardContainer">
-          <Input
-            className="promoCardInput"
-            containerClassName="promoCard"
-            placeholder="Введите промо код"
-            id="promoCard"
-            value={promoCard}
-            onChange={handlePromoCardChange}
-            label={
-              <div className="labelContainer">
-                <img
-                  src={promoCardImage}
-                  alt="promoCard"
-                  className="promoCardImage"
-                />
-                <span className="promoCardLabel">Промо код</span>
-                <img
-                  src={questionMarkImage}
-                  alt="questionMark"
-                  className="questionMarkImage"
-                />
-              </div>
-            }
-            sendButton = {<button className="applyButton" onClick={handleApplyPromoCard}><img src={applyButtonImage} alt="applyButton" /></button>}
-          />
-        </div>
-
-        <Input
-          className="defaultInput"
-          containerClassName="phoneNumber"
-          placeholder="+7 ( ХХХ) ХХХ ХХ ХХ"
-          id="phoneNumber"
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
-          label={
-            <div className="labelContainer">
-              <span className="phoneNumberLabel">
-                Телефон для смс уведомлений
-              </span>{" "}
-            </div>
-          }
-        />
+    <div className={styles.homePage}>
+      <div className={styles.brandsSlider} aria-label="Логотипы брендов">
+        <div className={styles.brandsSliderItem}>{brands.map((brand) => (
+          <img src={brand.image} alt={brand.name} />
+        ))}</div>
       </div>
     </div>
   );
 };
-
