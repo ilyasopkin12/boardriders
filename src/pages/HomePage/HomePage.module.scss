@@ -1,18 +1,21 @@
+@use "@shared/assets/fonts/_variables.scss" as variables;
+
 .homePage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    gap: 50px;
-    &-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #e9e7e7;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  &-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e9e7e7;
+  }
 }
+
 .brandsSlider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
