@@ -1,0 +1,43 @@
+@use "@shared/assets/fonts/_variables.scss" as variables;
+@use "@shared/assets/fonts/_mixins.scss" as mixins;
+
+.swiperContainer {
+    position: relative;
+}
+.customNavigation {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.customPrev {
+    width: 32px;
+    padding: 36px 13px 36px 8px;
+    height: 98px;
+    background-color: variables.$white-color;
+    &:hover {
+        background-color: variables.$white-color;
+    }
+}
+.customNext {
+    width: 32px;
+    padding: 36px 8px 36px 13px;
+    height: 98px;
+    background-color: variables.$white-color;
+    &:hover {
+        background-color: variables.$white-color;
+    }
+}
+.swiperSlideTitle {
+    position: absolute;
+    bottom: 76px;
+    left: 0;
+    background-color: variables.$black-color;
+    @include mixins.H1-style;
+    color: variables.$white-color;
+    padding: 15px 35px;
+}

@@ -1,141 +1,30 @@
-import "./HomePage.scss";
-import { Button } from "@/shared";
-import { Input } from "@/shared/ui/Input";
-import { useState } from "react";
-import bonusCardImage from "@/shared/assets/images/bonusCard.svg";
-import promoCardImage from "@/shared/assets/images/promoCard.svg";
-import questionMarkImage from "@/shared/assets/images/questionmark.svg";
-import applyButtonImage from "@/shared/assets/images/arrowRight.svg";
+import styles from "./HomePage.module.scss";
+import { CustomSwiper } from "@/shared/ui/Swiper";
+import sliderImage1 from "@/shared/assets/images/sliderImage1.png";
+import sliderImage2 from "@/shared/assets/images/sliderImage2.png";
+import sliderImage3 from "@/shared/assets/images/sliderImage3.png";
 export const HomePage = () => {
-  const [promoCard, setPromoCard] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [bonusCard, setBonusCard] = useState("");
-  const handlePromoCardChange =  (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setPromoCard(value);
-    }
-  };
-  const handlePhoneNumberChange = (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setPhoneNumber(value);
-    }
-  };
-  const handleBonusCardChange = (value: string) => {
-    if (/^\d*$/.test(value) && value.length <= 16) {
-      setBonusCard(value);
-    }
-  };
-  const handleApplyPromoCard = () => {
-    setPromoCard("");
-  };
+  const titles = ["WINTER SALE ДО -70%", "LIB TECH", "Boardriders"];
   return (
-    <div className="home-page">
-      <div className="button-container">
-        <Button
-          title="Проверить даты доставки"
-          variant="black"
-          size="small"
-          onClick={() => {}}
-          disabled={false}
+    <div className={styles.homePage}>
+      <section className={styles.slider}>
+        <CustomSwiper
+          images={[sliderImage1, sliderImage2, sliderImage3]}
+          slidesPerView={1.5}
+          spaceBetween="25px"
+          centeredSlides={true}
+          centeredSlidesBound={true}
+          loop={true}
+          style={{
+            maxWidth: "1920px",
+            margin: "0 auto",
+            paddingLeft: "25px",
+            paddingRight: "25px",
+          }}
+          navigation={true}
+          title={titles}
         />
-      </div>
-      <div className="button-container">
-        <Button
-          title="ПЕРЕЙТИ К ПОКУПКАМ"
-          variant="red"
-          size="large"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          title="Проверить даты доставки"
-          variant="blackBorder"
-          size="small"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          title="ПЕРЕЙТИ К ПОКУПКАМ"
-          variant="redBorder"
-          size="large"
-          onClick={() => {}}
-          disabled={false}
-        />
-      </div>
-      <div className="inputContainer">
-        <Input
-          className="defaultInput"
-          containerClassName="bonusCard"
-          placeholder="Введите номер карты"
-          id="bonusCard"
-          value={bonusCard}
-          onChange={handleBonusCardChange}
-          description="Номер на обратной стороне карты"
-          label={
-            <div className="labelContainer">
-              <img
-                src={bonusCardImage}
-                alt="bonusCard"
-                className="bonusCardImage"
-              />
-              <span className="bonusCardLabel">Бонусная карта</span>
-              <img
-                src={questionMarkImage}
-                alt="questionMark"
-                className="questionMarkImage"
-              />
-            </div>
-          }
-        />
-
-        <div className="promoCardContainer">
-          <Input
-            className="promoCardInput"
-            containerClassName="promoCard"
-            placeholder="Введите промо код"
-            id="promoCard"
-            value={promoCard}
-            onChange={handlePromoCardChange}
-            label={
-              <div className="labelContainer">
-                <img
-                  src={promoCardImage}
-                  alt="promoCard"
-                  className="promoCardImage"
-                />
-                <span className="promoCardLabel">Промо код</span>
-                <img
-                  src={questionMarkImage}
-                  alt="questionMark"
-                  className="questionMarkImage"
-                />
-              </div>
-            }
-            sendButton = {<button className="applyButton" onClick={handleApplyPromoCard}><img src={applyButtonImage} alt="applyButton" /></button>}
-          />
-        </div>
-
-        <Input
-          className="defaultInput"
-          containerClassName="phoneNumber"
-          placeholder="+7 ( ХХХ) ХХХ ХХ ХХ"
-          id="phoneNumber"
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
-          label={
-            <div className="labelContainer">
-              <span className="phoneNumberLabel">
-                Телефон для смс уведомлений
-              </span>{" "}
-            </div>
-          }
-        />
-      </div>
+      </section>
     </div>
   );
 };
-
