@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./productCard.module.scss";
 import favoritedImage from "@/shared/assets/images/isFavorited.svg";
@@ -8,8 +9,8 @@ interface IProductCardProps {
   price: number;
   image: string;
   category: string;
-  isFavorited: boolean;
-  setIsFavorited: (isFavorited: boolean) => void;
+  id: number;
+  initialFavorited?: boolean;
 }
 
 export const ProductCard = ({
@@ -17,9 +18,11 @@ export const ProductCard = ({
   price,
   image,
   category,
-  isFavorited,
-  setIsFavorited,
+  id,
+  initialFavorited = false,
 }: IProductCardProps) => {
+  const [isFavorited, setIsFavorited] = useState(initialFavorited);
+  
   const handleFavorited = () => {
     setIsFavorited(!isFavorited);
   };
@@ -34,7 +37,7 @@ export const ProductCard = ({
             >
               <img src={isFavorited ? favoritedImage : notFavoritedImage} alt="favorite-image" />
             </button>
-          <NavLink to="/productPage">
+          <NavLink to={`/product/${id}`}>
             <img src={image} alt="product-image" />
           </NavLink>
         </div>

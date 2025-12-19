@@ -1,44 +1,81 @@
 @use "@shared/assets/fonts/_variables.scss" as variables;
 @use "@shared/assets/fonts/_mixins.scss" as mixins;
 
+
 .homePage {
   display: flex;
   justify-content: space-between;
+  max-width: 1920px;
+  margin: 0 auto;
   align-items: center;
   flex-direction: column;
 }
 .slider {
-  max-width: 1920px;
-  margin: 0 auto;
+  margin-bottom: 100px;
   &Container {
     margin-bottom: 50px;
   }
 }
-.brandsSlider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 50px;
-  &Item {
+.dcPromo {
+  max-width: 1680px;
+  margin: 0 auto;
+  position: relative;
+  &ItemWrapper {
+    margin-bottom: 75px;
+  }
+  &Slider {
+    margin-bottom: 75px;
+  }
+  &SliderTitle {
+    @include mixins.H1-style;
+    color: variables.$black-color;
+  }
+  &Logo {
+    left: 36px;
+    top: 36px;
+    position: absolute;
+  }
+  &ItemWrapper {
     display: flex;
-    opacity: 0.75;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap:25px;
+  }
+  &ItemContent {
+    max-width: 668px;
+  }
+  &ItemTitle {
+    @include mixins.subtitle-1-21-medium-style;
+    color: variables.$black-color;
+  }
+  &ItemDescription {
+    @include mixins.body-2-14-medium-style;
+    color: variables.$dark-gray-color;
   }
 }
-.promoSlider{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 25px;
-  &Item {
-    &Title {
-      background-color: variables.$black-color;
-      padding: 15px 35px;
-      @include mixins.subtitle-1-21-medium-style;
-      color: variables.$white-color;
+
+.products{
+  margin-bottom: 100px;
+  &TitleWrapper {
+    margin-bottom: 50px;
+  }
+  &TitleText {
+    @include mixins.H1-style;
+  }
+  &Slider {
+    margin-bottom: 75px;
+  }
+  &Button {
+    &:disabled {
+      background-color: #CED4D7;
+      color: #828B8D;
+    }
+    &:hover {
+      background-color: #8d8b8b;
+    }
+    &:active {
+      background-color: #adadad;
     }
   }
 }
