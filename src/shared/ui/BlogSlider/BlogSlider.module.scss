@@ -1,0 +1,55 @@
+@use "@shared/assets/fonts/_variables.scss" as variables;
+@use "@shared/assets/fonts/_mixins.scss" as mixins;
+
+.blogSlider {
+  &Item {
+    display: flex;
+    flex: 1 1 100%;
+    background-color: variables.$black-color;
+    &Content {
+        flex-direction: column;
+        display: flex;
+        flex-grow: 1;
+    }
+    &Wrapper {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+    &Header {
+      padding: 50px 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &Category {
+      @include mixins.subtitle-1-21-medium-style;
+      color: variables.$white-color;
+    }
+    &More {
+      @include mixins.subtitle-1-21-medium-style;
+      color: variables.$white-color;
+      text-decoration: underline;
+    }
+    &Body {
+        padding: 50px 50px;
+        &Title {
+            text-align: left;
+            @include mixins.H1-style;
+            color: variables.$white-color;
+        }
+        &Description {
+            max-width: 550px;
+            text-align: left;
+            @include mixins.body-2-14-medium-style;
+            color: variables.$dark-gray-color;
+        }
+    }
+    &Footer {
+        padding: 50px 50px;
+        &Text {
+            text-align: left;
+            @include mixins.body-2-14-medium-style;
+            color: variables.$white-color;
+        }
+    }
+  }
+}

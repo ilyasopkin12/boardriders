@@ -1,15 +1,6 @@
 @use "@shared/assets/fonts/_variables.scss" as variables;
 @use "@shared/assets/fonts/_mixins.scss" as mixins;
 
-
-.homePage {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1920px;
-  margin: 0 auto;
-  align-items: center;
-  flex-direction: column;
-}
 .slider {
   margin-bottom: 100px;
   &Container {

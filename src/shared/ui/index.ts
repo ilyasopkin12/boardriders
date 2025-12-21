@@ -4,3 +4,5 @@ export { ProductCard } from "./ProductCard";
 export { PromoSlider } from "./PromoSlider";
 export { BrandSlider } from "./BrandSlider";
 export { CustomSwiper } from "./Swiper";
+export { Flex } from "./Flex";
+export { BlogSlider } from "./BlogSlider";

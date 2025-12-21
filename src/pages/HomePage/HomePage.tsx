@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import styles from "./HomePage.module.scss";
@@ -8,6 +8,8 @@ import {
   ProductCard,
   CustomSwiper,
   Button,
+  Flex,
+  BlogSlider,
 } from "@/shared/ui";
 import { getProductCard, IProduct } from "@/shared/api/productCard.api";
 import sliderImage1 from "@/shared/assets/images/sliderImage1.png";
@@ -80,7 +82,7 @@ export const HomePage = () => {
   });
 
   return (
-    <div className={styles.homePage}>
+    <Flex maxWidth={1920} margin="0 auto" direction="column" align="center">
       <section className={styles.slider}>
         <div className={styles.sliderContainer}>
           <CustomSwiper
@@ -136,31 +138,42 @@ export const HomePage = () => {
           </CustomSwiper>
         </div>
         <Button
-            title="Показать больше"
-            variant="black"
-            className={styles.productsButton}
-            size="small"
-            onClick={() => {
-              navigate("/products");
-            }}
-          />
+          title="Показать больше"
+          variant="black"
+          className={styles.productsButton}
+          size="small"
+          onClick={() => {
+            navigate("/products");
+          }}
+        />
       </section>
       <section className={styles.dcPromo}>
         <div className={styles.dcPromoWrapper}>
           <div className={styles.dcPromoItemWrapper}>
-              <picture className={styles.dcPromoItemImage}>
-                  <source srcSet={dcShoesPicture} type="image/png"/>
-                  {/* Тут будет еще один source*/}
-                  <img src={dcShoesPicture} alt="dcshoes-image"/>
-              </picture>
-              <img src={dcLogoPromoImage} alt="dc-logo-promo" className={styles.dcPromoLogo}/>
-              <div className={styles.dcPromoItemContent}>
-                  <p className={styles.dcPromoItemTitle}>Название акции</p>
-                  <p className={styles.dcPromoItemDescription}>Меня не спрашивали, а надо было спросить, что означает имя Заратустры именно в моих устах — в устах первого имморалиста: ведь то, в чём состоит неслыханная уникальность этого перса в истории, являет собою противоположность как раз этому.</p>
-              </div>
+            <picture className={styles.dcPromoItemImage}>
+              <source srcSet={dcShoesPicture} type="image/png" />
+              {/* Тут будет еще один source*/}
+              <img src={dcShoesPicture} alt="dcshoes-image" />
+            </picture>
+            <img
+              src={dcLogoPromoImage}
+              alt="dc-logo-promo"
+              className={styles.dcPromoLogo}
+            />
+            <div className={styles.dcPromoItemContent}>
+              <p className={styles.dcPromoItemTitle}>Название акции</p>
+              <p className={styles.dcPromoItemDescription}>
+                Меня не спрашивали, а надо было спросить, что означает имя
+                Заратустры именно в моих устах — в устах первого имморалиста:
+                ведь то, в чём состоит неслыханная уникальность этого перса в
+                истории, являет собою противоположность как раз этому.
+              </p>
+            </div>
           </div>
           <div className={styles.dcPromoSlider}>
-            <p className={styles.dcPromoSliderTitle}>DC Shoes популярное в коллекции</p>
+            <p className={styles.dcPromoSliderTitle}>
+              DC Shoes популярное в коллекции
+            </p>
             <CustomSwiper
               slidesPerView={4}
               navigation={true}
@@ -187,16 +200,19 @@ export const HomePage = () => {
             </CustomSwiper>
           </div>
           <Button
-              title="Показать больше"
-              variant="black"
-              className={styles.productsButton}
-              size="small"
-              onClick={() => {
-                navigate("/products");
-              }}
-            />
+            title="Показать больше"
+            variant="black"
+            className={styles.productsButton}
+            size="small"
+            onClick={() => {
+              navigate("/products");
+            }}
+          />
         </div>
       </section>
-    </div>
+      <section className={styles.blog}>
+        <BlogSlider />
+      </section>
+    </Flex>
   );
 };
