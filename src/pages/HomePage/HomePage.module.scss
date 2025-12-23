@@ -7,9 +7,16 @@
     margin-bottom: 50px;
   }
 }
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap:50px;
+  margin-bottom: 25px;
+}
 .dcPromo {
   max-width: 1680px;
   margin: 0 auto;
+  margin-bottom: 100px;
   position: relative;
   &ItemWrapper {
     margin-bottom: 75px;
@@ -59,14 +66,14 @@
   }
   &Button {
     &:disabled {
-      background-color: #CED4D7;
-      color: #828B8D;
+      background-color: variables.$gray-color;
+      color: variables.$dark-gray-color;
     }
     &:hover {
-      background-color: #8d8b8b;
+      background-color: variables.$dark-gray-color;
     }
     &:active {
-      background-color: #adadad;
+      background-color: variables.$gray-color;
     }
   }
 }

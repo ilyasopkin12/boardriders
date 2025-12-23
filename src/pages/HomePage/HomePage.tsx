@@ -10,6 +10,7 @@ import {
   Button,
   Flex,
   BlogSlider,
+  LoyaltyProgram,
 } from "@/shared/ui";
 import { getProductCard, IProduct } from "@/shared/api/productCard.api";
 import sliderImage1 from "@/shared/assets/images/sliderImage1.png";
@@ -29,6 +30,7 @@ import gnuImage from "@shared/assets/images/brandImage9.png";
 import skullcandyImage from "@shared/assets/images/brandImage10.png";
 import promoImage1 from "@shared/assets/images/promoImage1.png";
 import promoImage2 from "@shared/assets/images/promoImage2.png";
+import loyaltyProgramImage from "@shared/assets/images/loyaltyProgramImage.png";
 
 const titles = ["WINTER SALE ДО -70%", "LIB TECH", "Boardriders"];
 const brands = [
@@ -212,6 +214,7 @@ export const HomePage = () => {
       </section>
       <section className={styles.blog}>
         <BlogSlider />
+        <LoyaltyProgram />
       </section>
     </Flex>
   );

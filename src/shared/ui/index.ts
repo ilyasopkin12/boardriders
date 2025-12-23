@@ -6,3 +6,4 @@ export { BrandSlider } from "./BrandSlider";
 export { CustomSwiper } from "./Swiper";
 export { Flex } from "./Flex";
 export { BlogSlider } from "./BlogSlider";
+export { LoyaltyProgram } from "./LoyaltyProgram";

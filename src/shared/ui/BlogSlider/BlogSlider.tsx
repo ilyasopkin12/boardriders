@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./BlogSlider.module.scss";
 import blogImage1 from "@shared/assets/images/blogVideoPreview.png";
 import blogImage2 from "@shared/assets/images/sliderImage1.png";
+import blogSliderLine from "@shared/assets/images/blogSliderLine.svg";
 export const BlogSlider = () => {
   return (
     <CustomSwiper
@@ -11,7 +12,7 @@ export const BlogSlider = () => {
       spaceBetween={5}
       centeredSlides={true}
       loop={true}
-      style={{ width: "1920px" }}
+      style={{ width: "1905px" }}
     >
       <SwiperSlide className={styles.blogSliderItem}>
         <div className={styles.blogSliderItemWrapper}>
@@ -44,6 +45,7 @@ export const BlogSlider = () => {
             </p>
           </div>
           <div className={styles.blogSliderItemFooter}>
+            <img src={blogSliderLine} alt="blog-slider-line" />
             <p className={styles.blogSliderItemFooterText}> Читать продолжение </p>
           </div>
         </div>

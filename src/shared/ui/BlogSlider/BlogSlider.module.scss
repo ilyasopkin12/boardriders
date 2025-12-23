@@ -26,6 +26,7 @@
     }
     &More {
       @include mixins.subtitle-1-21-medium-style;
+      cursor: pointer;
       color: variables.$white-color;
       text-decoration: underline;
     }
@@ -44,9 +45,13 @@
         }
     }
     &Footer {
+        display: flex;
+        gap:15px;
         padding: 50px 50px;
         &Text {
+            cursor: pointer;
             text-align: left;
+            text-decoration: underline;
             @include mixins.body-2-14-medium-style;
             color: variables.$white-color;
         }

@@ -48,15 +48,6 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        &:hover {
-            background-color: transparent;
-        }
-        &:active {
-            background-color: transparent;
-        }
-        &:focus {
-            background-color: transparent;
-        }
     }
     &__subscribeDiscount {
         color: variables.$red-color;
