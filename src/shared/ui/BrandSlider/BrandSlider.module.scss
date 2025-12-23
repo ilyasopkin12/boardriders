@@ -1,0 +1,14 @@
+.brandsSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    &Item {
+      display: flex;
+      opacity: 0.75;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+    }
+  }

@@ -8,8 +8,8 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   image?: string;
-  variant: 'black' | 'red' | 'redBorder' | 'blackBorder';
-  size: 'small' | 'large' | 'extraSmall';
+  variant: 'black' | 'red' | 'redBorder' | 'blackBorder' | 'loyaltyProgram';
+  size: 'small' | 'large' | 'extraSmall' | 'loyaltyProgram';
 }
 export const Button: React.FC<IButtonProps> = ({title, onClick, disabled, variant, size, className, image, type = 'button'}) => {
   return (

@@ -1,9 +1,8 @@
 import { ProductCard } from "@/shared/ui";
-import {useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getProductCard, IProduct } from "@/shared/api/productCard.api";
+import styles from "./AboutPage.module.scss";
 export const AboutPage = () => {
-  const [isFavorited, setIsFavorited] = useState(false);
   const { data: products, isLoading, error } = useQuery<IProduct[],Error>({
     queryKey: ["products"],
     queryFn: getProductCard,
@@ -15,17 +14,16 @@ export const AboutPage = () => {
     return <div>Error: {error.message}</div>;
   }
   return (
-    <div className="container">
+    <div className={styles.aboutPage}>
       {products && products.length > 0 ? (
-        products.map((product) => (
+        products.slice(5,7).map((product) => (
           <ProductCard
             key={product.id}
+            id={product.id}
             brand={product.title}
             category={product.category}
             price={product.price}
             image={product.image}
-            isFavorited={isFavorited}
-            setIsFavorited={setIsFavorited}
           />
         ))
       ) : (

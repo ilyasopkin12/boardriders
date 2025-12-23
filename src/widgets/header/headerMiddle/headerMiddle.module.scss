@@ -12,14 +12,14 @@ Button {
   Cursor: pointer;
   border: none;
   &:disabled {
-    background-color: transparent;
+    background-color: variables.$white-color;
     color: #828B8D;
   }
   &:hover {
-    background-color: transparent;
+    opacity: 0.7;
   }
   &:active {
-    background-color: transparent;
+    opacity: 0.5;
   }
 }
 .header {

@@ -1,0 +1,17 @@
+@use "@shared/assets/fonts/_variables.scss" as variables;
+@use "@shared/assets/fonts/_mixins.scss" as mixins;
+
+.promoSlider{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    &Item {
+      &Title {
+        background-color: variables.$black-color;
+        padding: 15px 35px;
+        @include mixins.subtitle-1-21-medium-style;
+        color: variables.$white-color;
+      }
+    }
+  }
