@@ -30,9 +30,8 @@ import gnuImage from "@shared/assets/images/brandImage9.png";
 import skullcandyImage from "@shared/assets/images/brandImage10.png";
 import promoImage1 from "@shared/assets/images/promoImage1.png";
 import promoImage2 from "@shared/assets/images/promoImage2.png";
-import loyaltyProgramImage from "@shared/assets/images/loyaltyProgramImage.png";
 
-const titles = ["WINTER SALE ДО -70%", "LIB TECH", "Boardriders"];
+const titles = ["WINTER SALE ДО -70%", "LIB TECH", "Boardriders", "LIB TECH", "WINTER SALE ДО -70%"];
 const brands = [
   {
     name: "heart",
@@ -88,7 +87,7 @@ export const HomePage = () => {
       <section className={styles.slider}>
         <div className={styles.sliderContainer}>
           <CustomSwiper
-            images={[sliderImage1, sliderImage2, sliderImage3]}
+            images={[sliderImage1, sliderImage2, sliderImage3, sliderImage3, sliderImage1]}
             slidesPerView={1.5}
             spaceBetween={25}
             centeredSlides={true}

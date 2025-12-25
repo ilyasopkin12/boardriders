@@ -4,6 +4,7 @@ import styles from "./BlogSlider.module.scss";
 import blogImage1 from "@shared/assets/images/blogVideoPreview.png";
 import blogImage2 from "@shared/assets/images/sliderImage1.png";
 import blogSliderLine from "@shared/assets/images/blogSliderLine.svg";
+import playIcon from "@shared/assets/images/playIcon.svg";
 export const BlogSlider = () => {
   return (
     <CustomSwiper
@@ -19,6 +20,11 @@ export const BlogSlider = () => {
           <img
             className={styles.blogSliderItemWrapperImage}
             src={blogImage1}
+            alt="blog-image"
+          />
+          <img
+            className={styles.blogSliderItemWrapperPlayIcon}
+            src={playIcon}
             alt="blog-image"
           />
         </div>

@@ -11,7 +11,10 @@ export interface IProduct {
 
 export const getProductCard = async (): Promise<IProduct[]> => {
   const api = axios.create({
-    baseURL: "https://fakestoreapi.com",
+    baseURL: "http://localhost:3000",
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
   const response = await api.get<IProduct[]>("/products");
   return response.data;

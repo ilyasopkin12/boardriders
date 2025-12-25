@@ -16,7 +16,7 @@ export const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       {products && products.length > 0 ? (
-        products.slice(5,7).map((product) => (
+        products.map((product) => (
           <ProductCard
             key={product.id}
             id={product.id}

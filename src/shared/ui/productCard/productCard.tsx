@@ -28,24 +28,22 @@ export const ProductCard = ({
   };
   return (
     <div className={styles.productCard}>
-      <div className={styles.productCard__wrapper}>
-        <div className={styles.productCard__image}>
-            <button
-              type="button"
-              onClick={handleFavorited}
-              className={styles.productCard__button}
-            >
-              <img src={isFavorited ? favoritedImage : notFavoritedImage} alt="favorite-image" />
-            </button>
-          <NavLink to={`/product/${id}`}>
-            <img src={image} alt="product-image" />
-          </NavLink>
-        </div>
-        <div className={styles.productCard__text}>
-          <p className={styles.productCard__brand}>{brand}</p>
-          <p className={styles.productCard__description}>{category}</p>
-          <p className={styles.productCard__price}> {price} ₽</p>
-        </div>
+      <div className={styles.productCard__image}>
+          <button
+            type="button"
+            onClick={handleFavorited}
+            className={styles.productCard__button}
+          >
+            <img src={isFavorited ? favoritedImage : notFavoritedImage} alt="favorite-image" />
+          </button>
+        <NavLink to={`/product/${id}`}>
+          <img src={`http://localhost:3000/${image}`} alt="product-image" />
+        </NavLink>
+      </div>
+      <div className={styles.productCard__text}>
+        <p className={styles.productCard__brand}>{brand}</p>
+        <p className={styles.productCard__description}>{category}</p>
+        <p className={styles.productCard__price}> {price} ₽</p>
       </div>
     </div>
   );
