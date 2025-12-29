@@ -9,7 +9,7 @@ import { ClientChat, OperatorPanel } from "./features";
 const queryClient = new QueryClient();
 const userId = "1";
 const operatorId = "2";
-const isOperator = false;
+const isOperator = true;
 function App() {
   return (
     <QueryClientProvider client={queryClient}>

@@ -31,7 +31,6 @@ import skullcandyImage from "@shared/assets/images/brandImage10.png";
 import promoImage1 from "@shared/assets/images/promoImage1.png";
 import promoImage2 from "@shared/assets/images/promoImage2.png";
 
-
 const titles = ["WINTER SALE ДО -70%", "LIB TECH", "Boardriders", "LIB TECH", "WINTER SALE ДО -70%"];
 const brands = [
   {

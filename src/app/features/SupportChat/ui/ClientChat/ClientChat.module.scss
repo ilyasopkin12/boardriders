@@ -2,24 +2,34 @@ Button {
     background: none;
 }
 .chatContainer {
-    &.open {
+  &.open {
     z-index: 1000;
     display: flex;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 30px;
     flex-direction: column;
     height: 600px;
     max-width: 500px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   &.closed {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: -450px;
+    right: 30px;
+    height: 600px;
+    max-width: 500px;
+    z-index: 1000;
+    .messagesContainer {
+      display: none;
+    }
+    .chatHeader {
+      display: flex;
+    }
+    .inputContainer {
+      display: none;
+    }
   }
 }
   .chatHeader {
@@ -156,5 +166,6 @@ Button {
     background: #ccc;
     cursor: not-allowed;
   }
+  
   
   
