@@ -58,7 +58,7 @@ export function ClientChat({ userId }: ClientChatProps) {
   const [inputText, setInputText] = useState(loadSavedInput);
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const typingTimeoutRef = useRef<number | null>(null);
   const [isOpen, setIsOpen] = useState(true);
 
   // Прокрутка к последнему сообщению
