@@ -5,7 +5,11 @@ import { AboutPage } from "../pages/AboutPage";
 import { Header, Footer } from "../widgets";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ErrorBoundary } from "./providers/ui/errorBoundary";
+import { ClientChat, OperatorPanel } from "./features";
 const queryClient = new QueryClient();
+const userId = "1";
+const operatorId = "2";
+const isOperator = false;
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -13,6 +17,7 @@ function App() {
         <div className="App">
           <BrowserRouter>
             <Header />
+            {isOperator ? <OperatorPanel userId={operatorId} /> : <ClientChat userId={userId} />}
             <Routes>
               <Route path="/homepage" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />

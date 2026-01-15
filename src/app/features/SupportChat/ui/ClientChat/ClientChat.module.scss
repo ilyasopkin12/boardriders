@@ -1,0 +1,171 @@
+Button {
+    background: none;
+}
+.chatContainer {
+  &.open {
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    flex-direction: column;
+    height: 600px;
+    max-width: 500px;
+  }
+  &.closed {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: -450px;
+    right: 30px;
+    height: 600px;
+    max-width: 500px;
+    z-index: 1000;
+    .messagesContainer {
+      display: none;
+    }
+    .chatHeader {
+      display: flex;
+    }
+    .inputContainer {
+      display: none;
+    }
+  }
+}
+  .chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #4caf50;
+    color: white;
+  }
+  
+  .chatHeader h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .statusIndicator {
+    font-size: 12px;
+  }
+  
+  .statusIndicator.online {
+    color: #fff;
+  }
+  
+  .statusIndicator.offline {
+    color: #ccc;
+  }
+  
+  .chatStatus {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+  }
+  
+  /* Сообщения */
+  .messagesContainer {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f9f9f9;
+  }
+  
+  .messageContainer {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .messageServer {
+    background: #e3f2fd;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
+    font-style: italic;
+    color: #666;
+  }
+  
+  .messageClient {
+    background: #e8f5e9;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .messageOperator {
+    background: #fff3e0;
+    margin-right: auto;
+  }
+  
+  .messageSender {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .messageText {
+    word-wrap: break-word;
+    margin-bottom: 5px;
+  }
+  
+  .messageTime {
+    font-size: 10px;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  .typingIndicator {
+    padding: 10px;
+    font-style: italic;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  /* Ввод */
+  .inputContainer {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background: white;
+  }
+  
+  .inputContainer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .inputContainer input:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  .inputContainer button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+  
+  .inputContainer button:hover:not(:disabled) {
+    background: #45a049;
+  }
+  
+  .inputContainer button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
+  

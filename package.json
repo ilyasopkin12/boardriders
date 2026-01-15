@@ -16,6 +16,7 @@
     "react-router-dom": "^7.9.5",
     "react-scripts": "5.0.1",
     "scss": "^0.2.4",
+    "socket.io-client": "^4.8.3",
     "swiper": "^12.0.3",
     "vite": "^7.2.1",
     "web-vitals": "^2.1.4",
@@ -26,7 +27,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite"
+    "start": "vite",
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "eslintConfig": {
     "extends": [
@@ -49,9 +52,14 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "@testing-library/react": "^16.3.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^20.0.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
-    "sass": "^1.93.3"
+    "@vitest/ui": "^4.0.17",
+    "jsdom": "^27.4.0",
+    "sass": "^1.93.3",
+    "vitest": "^4.0.17"
   }
 }
