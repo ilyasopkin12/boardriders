@@ -61,15 +61,6 @@ export function ClientChat({ userId }: ClientChatProps) {
   const typingTimeoutRef = useRef<number | null>(null);
   const [isOpen, setIsOpen] = useState(true);
 
-  // Прокрутка к последнему сообщению
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
   // Сохранение сообщений в localStorage при их изменении
   useEffect(() => {
     try {
